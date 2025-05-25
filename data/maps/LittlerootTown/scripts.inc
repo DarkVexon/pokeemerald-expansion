@@ -1,7 +1,7 @@
 .set LOCALID_TWIN, 1
-.set LOCALID_MOM, 4
-.set LOCALID_RIVAL, 7
-.set LOCALID_BIRCH, 8
+.set LOCALID_MOM, 3
+.set LOCALID_RIVAL, 4
+.set LOCALID_BIRCH, 6
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -43,7 +43,7 @@ LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
-	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
+	@ call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
@@ -114,8 +114,8 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
-	setvar VAR_0x8004, 5
-	setvar VAR_0x8005, 8
+	setvar VAR_0x8004, 11
+	setvar VAR_0x8005, 4
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
@@ -125,8 +125,8 @@ LittlerootTown_EventScript_StepOffTruckMale::
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
-	setvar VAR_0x8004, 14
-	setvar VAR_0x8005, 8
+	setvar VAR_0x8004, 20
+	setvar VAR_0x8005, 4
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
@@ -173,7 +173,7 @@ LittlerootTown_Movement_MomExitHouse:
 	step_end
 
 LittlerootTown_Movement_MomApproachPlayerAtTruck:
-	walk_down
+	@ walk_down
 	walk_in_place_faster_left
 	step_end
 
@@ -184,7 +184,7 @@ LittlerootTown_Movement_MomApproachDoor:
 	step_end
 
 LittlerootTown_Movement_MomEnterHouse:
-	walk_up
+	@ walk_up
 	set_invisible
 	step_end
 
@@ -196,7 +196,7 @@ LittlerootTown_Movement_PlayerApproachDoor:
 	step_end
 
 LittlerootTown_Movement_PlayerEnterHouse:
-	walk_up
+	@ walk_up
 	walk_up
 	step_end
 
@@ -311,35 +311,37 @@ LittlerootTown_Movement_TwinApproachPlayerLeft:
 	disable_jump_landing_ground_effect
 	jump_in_place_right
 	delay_8
-	walk_fast_right
+	walk_fast_down
+	walk_fast_down
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_up
 	walk_fast_up
-	walk_fast_left
-	face_down
+	walk_fast_up
+	face_left
 	step_end
 
 LittlerootTown_Movement_TwinPushPlayerFromRoute:
-	walk_down
+	walk_left
 	step_end
 
 LittlerootTown_Movement_TwinReturnLeft:
 	walk_right
 	walk_down
 	walk_down
-	walk_left
+	walk_down
 	walk_left
 	walk_left
 	walk_left
 	walk_up
-	walk_in_place_faster_down
+	walk_up
+	walk_in_place_faster_up
 	step_end
 
 LittlerootTown_Movement_PushPlayerBackFromRoute:
 	lock_facing_direction
-	walk_down
+	walk_left
 	unlock_facing_direction
 	step_end
 
