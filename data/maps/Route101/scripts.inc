@@ -24,15 +24,15 @@ Route101_EventScript_StartBirchRescue::
 	playbgm MUS_HELP, TRUE
 	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
 	closemessage
-	setobjectxy LOCALID_BIRCH, 0, 15
-	setobjectxy LOCALID_ZIGZAGOON, 0, 16
+	setobjectxy LOCALID_BIRCH, 7, 7
+	setobjectxy LOCALID_ZIGZAGOON, 9, 7
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
 	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunAway1
 	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
 	waitmovement 0
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunInCircles
-	waitmovement 0
+	@ applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
+	@ applymovement LOCALID_BIRCH, Route101_Movement_BirchRunInCircles
+	@ waitmovement 0
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch
@@ -117,12 +117,13 @@ Route101_Movement_ZigzagoonChaseInCircles:
 	step_end
 
 Route101_Movement_ZigzagoonChase1:
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
+	@ walk_fast_up
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_up
+	walk_fast_left
 	step_end
 
 @ Leftover data? This command is unused.
@@ -136,11 +137,14 @@ Route101_Movement_ZigzagoonFaceBirch:
 	step_end
 
 Route101_Movement_EnterScene:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_in_place_faster_left
+	@ walk_fast_up
+	@ walk_fast_up
+	@ walk_fast_up
+	@ walk_fast_up
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_right
 	step_end
 
 Route101_Movement_BirchRunInCircles:
@@ -177,12 +181,13 @@ Route101_Movement_BirchRunInCircles:
 	step_end
 
 Route101_Movement_BirchRunAway1:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_right
+	@ walk_fast_up
+	@ walk_fast_up
+	walk_fast_left
 	step_end
 
 @ Leftover data? This command is unused.
@@ -225,8 +230,8 @@ Route101_EventScript_BirchsBag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
-	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 7
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	special ChooseStarter
 	waitstate

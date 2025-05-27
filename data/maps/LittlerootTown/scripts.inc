@@ -287,8 +287,8 @@ LittlerootTown_EventScript_GoodLuck::
 
 LittlerootTown_EventScript_NeedPokemonTriggerLeft::
 	lockall
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinApproachPlayerLeft
-	waitmovement 0
+	@ applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinApproachPlayerLeft
+	@ waitmovement 0
 	call LittlerootTown_EventScript_DangerousWithoutPokemon
 	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinReturnLeft
 	waitmovement 0
@@ -323,19 +323,19 @@ LittlerootTown_Movement_TwinApproachPlayerLeft:
 	step_end
 
 LittlerootTown_Movement_TwinPushPlayerFromRoute:
-	walk_left
+	walk_up
 	step_end
 
 LittlerootTown_Movement_TwinReturnLeft:
-	walk_right
+	@ walk_right
+	@ walk_down
+	@ walk_down
 	walk_down
-	walk_down
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
+	@ walk_left
+	@ walk_left
+	@ walk_left
+	@ walk_up
+	@ walk_up
 	walk_in_place_faster_up
 	step_end
 
@@ -381,9 +381,9 @@ LittlerootTown_Movement_TwinReturnRight:
 
 LittlerootTown_EventScript_GoSaveBirchTrigger::
 	lockall
-	applymovement LOCALID_TWIN, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_TWIN, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special GetPlayerBigGuyGirlString
 	msgbox LittlerootTown_Text_CanYouGoSeeWhatsHappening, MSGBOX_DEFAULT
