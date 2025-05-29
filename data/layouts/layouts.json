@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/StartingLine_PlayerHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/StartingLine_PlayerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARTING_LINE",
+      "name": "StartingLine_Layout",
+      "width": 52,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/StartingLine/border.bin",
+      "blockdata_filepath": "data/layouts/StartingLine/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARTING_LINE_RIVAL_HOUSE_2F",
+      "name": "StartingLine_RivalHouse_2F_Layout",
+      "width": 10,
+      "height": 3,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/StartingLine_RivalHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/StartingLine_RivalHouse_2F/map.bin"
     }
   ]
 }

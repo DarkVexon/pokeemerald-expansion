@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_IndoorStartingLine"
+    "gMapGroup_IndoorStartingLine",
+    "gMapGroup_NewTownsAndRoutes"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -624,6 +625,10 @@
   ],
   "gMapGroup_IndoorStartingLine": [
     "StartingLine_PlayerHouse_2F",
-    "StartingLine_PlayerHouse_1F"
+    "StartingLine_PlayerHouse_1F",
+    "StartingLine_RivalHouse_2F"
+  ],
+  "gMapGroup_NewTownsAndRoutes": [
+    "StartingLine"
   ]
 }
