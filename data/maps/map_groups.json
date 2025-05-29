@@ -623,6 +623,7 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_IndoorStartingLine": [
-    "StartingLine_PlayerHouse_2F"
+    "StartingLine_PlayerHouse_2F",
+    "StartingLine_PlayerHouse_1F"
   ]
 }
