@@ -137,12 +137,6 @@
       "map": "MAP_STARTING_LINE_PLAYER_HOUSE_2F",
       "x": 4,
       "y": 2
-    },
-    {
-      "id": "HEAL_LOCATION_STARTING_LINE_PLAYER_HOUSE_2F",
-      "map": "MAP_STARTING_LINE_RIVAL_HOUSE_2F",
-      "x": 4,
-      "y": 2
     }
   ]
 }

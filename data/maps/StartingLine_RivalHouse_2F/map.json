@@ -16,10 +16,10 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 8,
+      "x": 1,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_STARTING_LINE_PLAYER_HOUSE_1F",
+      "dest_map": "MAP_STARTING_LINE_RIVAL_HOUSE_1F",
       "dest_warp_id": "0"
     }
   ],
@@ -27,15 +27,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 6,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "StartingLine_PlayerHouse_2F_EventScript_Map"
-    },
-    {
-      "type": "sign",
-      "x": 1,
+      "x": 8,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -43,15 +35,23 @@
     },
     {
       "type": "sign",
-      "x": 6,
+      "x": 4,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "StartingLine_PlayerHouse_2F_EventScript_Map"
+      "script": "StartingLine_PlayerHouse_2F_EventScript_Gamecube"
     },
     {
       "type": "sign",
-      "x": 4,
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "StartingLine_PlayerHouse_2F_EventScript_Gamecube"
+    },
+    {
+      "type": "sign",
+      "x": 6,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

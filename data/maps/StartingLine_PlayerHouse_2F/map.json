@@ -43,14 +43,6 @@
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "StartingLine_PlayerHouse_2F_EventScript_Map"
-    },
-    {
-      "type": "sign",
       "x": 4,
       "y": 1,
       "elevation": 0,
