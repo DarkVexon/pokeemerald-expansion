@@ -627,7 +627,8 @@
     "StartingLine_PlayerHouse_2F",
     "StartingLine_PlayerHouse_1F",
     "StartingLine_RivalHouse_2F",
-    "StartingLine_RivalHouse_1F"
+    "StartingLine_RivalHouse_1F",
+    "StartingLine_Lab"
   ],
   "gMapGroup_NewTownsAndRoutes": [
     "StartingLine"

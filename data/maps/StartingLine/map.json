@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StartingLine_EventScript_TechGuy",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StartingLine_EventScript_Chef",
       "flag": "0"
     },
     {
@@ -86,7 +86,7 @@
       "x": 39,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_STARTING_LINE",
+      "dest_map": "MAP_STARTING_LINE_LAB",
       "dest_warp_id": "0"
     }
   ],
@@ -106,7 +106,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "StartingLine_EventScript_PlayersHouseSign"
+      "script": "StartingLine_EventScript_RivalsHouseSign"
     },
     {
       "type": "sign",
@@ -114,7 +114,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "StartingLine_EventScript_PlayersHouseSign"
+      "script": "StartingLine_EventScript_LabSign"
     }
   ]
 }

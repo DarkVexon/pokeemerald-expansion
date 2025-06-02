@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/StartingLine_RivalHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/StartingLine_RivalHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARTING_LINE_LAB",
+      "name": "StartingLine_Lab_Layout",
+      "width": 16,
+      "height": 4,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/StartingLine_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/StartingLine_Lab/map.bin"
     }
   ]
 }
