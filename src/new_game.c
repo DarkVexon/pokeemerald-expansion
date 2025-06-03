@@ -66,7 +66,7 @@ static const struct ContestWinner sContestWinnerPicDummy =
     .trainerName = _("")
 };
 
-static const u8 *const protagName = COMPOUND_STRING("Terminus");
+static const u8 *const protagName = COMPOUND_STRING("Sym");
 
 void SetTrainerId(u32 trainerId, u8 *dst)
 {
@@ -160,9 +160,10 @@ void NewGameInitData(void)
     
     gSaveBlock2Ptr->playerGender = MALE;
     u8 i;
-    for (i = 0; i < 7; i++)
+    for (i = 0; i < 3; i++)
         gSaveBlock2Ptr->playerName[i] = protagName[i];
-    gSaveBlock2Ptr->playerName[7] = 0xFF; 
+    for (i = 3; i < 8; i++)
+        gSaveBlock2Ptr->playerName[i] = 0xFF;
     gDifferentSaveFile = TRUE;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();

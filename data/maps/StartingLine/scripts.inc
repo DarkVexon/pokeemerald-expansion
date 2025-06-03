@@ -50,3 +50,11 @@ StartingLine_EventScript_LabSign::
 
 StartingLine_Text_LabSign:
     .string "Professor Syte's House$"
+
+StartingLine_EventScript_BlockingProfessor::
+    msgbox StartingLine_Text_BlockingProfessor, MSGBOX_NPC
+    end
+
+StartingLine_Text_BlockingProfessor:
+    .string "{PLAYER}! It's time for your Pokemon adventure!\n"
+    .string "There's no time to go outside! Come meet me in my lab!$"
